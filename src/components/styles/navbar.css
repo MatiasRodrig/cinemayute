@@ -1,0 +1,153 @@
+@media screen and (max-width: 894px) {
+  .nav {
+    width: 100%;
+    background-color: #000000;
+  }
+  .nav a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .logo {
+    color: #fcfafb;
+    font-family: "Cinema St";
+    padding: 20px;
+    margin-left: 20px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .hamburger {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #dddddd;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger:before,
+  .hamburger:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #f6f5f5;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger:before {
+    transform: translateY(-8px);
+  }
+
+  .hamburger:after {
+    transform: translateY(8px);
+  }
+
+  .menu-toggle.active .hamburger {
+    background-color: transparent;
+  }
+
+  .menu-toggle.active .hamburger:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active .hamburger:after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .menu {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    left: 0;
+    height: calc(100% - 80px);
+    background-color: transparent;
+    z-index: 998;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .menu li {
+    margin-bottom: 20px;
+  }
+
+  .menu li:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(33, 33, 33);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu a:hover {
+    color: #dadada;
+  }
+}
+
+@media screen and (min-width: 895px) {
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #fcfafb;
+  }
+
+  .logo {
+    font-family: "Cinema St";
+    padding: 20px;
+    margin-left: 20px;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .menu {
+    padding: 20px;
+    margin-right: 60px;
+  }
+
+  .menu a {
+    padding: 15px;
+    font-family: "Gotham", sans-serif;
+    color: #999999;
+    font-size: 15px;
+    padding: 22px, 19px, 5px;
+  }
+}
